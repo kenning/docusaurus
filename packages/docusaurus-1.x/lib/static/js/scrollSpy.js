@@ -39,7 +39,7 @@
          */
         if (currNavActive && i < headings.length - 1) {
           const heading = headings[i + 1];
-          const next = decodeURIComponent(heading.href.split('#')[1]);
+          const next = decodeURIComponent(heading.href.replace(/"\*_/, '').split('#')[1]);
           const nextHeader = document.getElementById(next);
 
           if (nextHeader) {
